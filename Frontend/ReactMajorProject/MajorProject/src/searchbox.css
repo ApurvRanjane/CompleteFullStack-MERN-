@@ -1,0 +1,20 @@
+.SearchBox {
+  text-align: center;          /* center text and input */
+  margin-top: 50px;  
+  margin-bottom: 25px;         /* space from top of the page */
+}
+
+.SearchBox h3 {
+  color: #1976d2;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.SearchBox form {
+  display: inline-block;       /* centers the form horizontally */
+  text-align: center;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}

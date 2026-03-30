@@ -1,0 +1,20 @@
+h1{
+    font-family:league spartan;
+    color: #ffa511;
+    text-align: center;
+    font-size: 55Px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-decoration: double teal underline;
+    text-transform:uppercase;
+    box-shadow: 2px 2px 10px black;
+    background-image: url("https://i.ytimg.com/vi/-JKdUAq6McI/maxresdefault.jpg");
+    background-size: cover;
+    transition-duration: 4s;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+h1:hover{
+    margin:400px;
+}

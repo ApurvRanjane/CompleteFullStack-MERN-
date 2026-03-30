@@ -1,0 +1,54 @@
+.outer span{
+    font-size: 100px;
+    font-family:sans-serif;
+}
+#g{
+    color: rgb(46, 46, 167);
+    opacity: 0.9;
+}
+#o{
+    color: rgb(192, 33, 33);
+    opacity: 0.9;
+}
+#o2{
+    color: yellow;
+    opacity: 0.9;
+}
+#g2{
+    color: rgb(49, 49, 186);
+    opacity: 0.9;
+}
+#l{    color:rgb(24, 155, 24);
+    opacity: 0.9;}
+#e{
+    color: rgb(196, 38, 38);
+    opacity: 0.9;
+}
+.outer{
+    position: absolute;
+    left: 700px;
+    top: 200px;
+}
+#bar{
+    width: 550px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-family: serif;
+    opacity: 0.5;
+    position: absolute;
+    top:350px ;
+    left:590px;
+}
+button{
+    width: 100px;
+    height: 50px;
+    color: white;
+    background-color: rgb(42, 42, 159);
+    border: 1px solid rgb(42, 42, 159;
+    position: absolute;
+    left: 1000px;
+    top: 100px;
+}

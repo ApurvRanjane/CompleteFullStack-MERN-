@@ -1,0 +1,18 @@
+h1{
+    color:red;
+    background-color: pink;
+    text-align: center;
+    font-weight: 800;
+    text-decoration: wavy chocolate underline;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    text-align: start;
+    background-color: maroon;
+    color: white;
+    letter-spacing: 4px;
+    line-height:3;
+    font-size: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}

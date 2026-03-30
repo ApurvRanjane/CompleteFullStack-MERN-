@@ -1,0 +1,32 @@
+.apurv{
+    background-color: blueviolet;
+    height: 400px;
+    width: 400px;
+    border: 2px solid black;
+    margin:20px auto;
+}
+.ap{
+    background-color: blue;
+    height: 400px;
+    width: 400px; 
+    border: 2px solid black;
+    z-index: 2;
+    position: relative;
+    margin:20px auto;
+  
+}
+.apu{
+    background-color: gold;
+    height: 400px;
+    width: 400px; 
+    border: 2px solid black;
+    position: relative;
+    bottom:100px;
+    margin:20px auto;
+}
+
+/* .api{
+    display: flex;
+    height: 1500px;
+    width: 1600px;
+} */

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add College Event</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-image: url("https://img.freepik.com/free-vector/party-crowd-gold-bokeh-lights-stars_1048-12702.jpg?t=st=1752723125~exp=1752726725~hmac=32e2b6b6e7f9f4743b824e3a74b4ae0183b59e77fd5d8fa50523e2654b352df1&w=1380"); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 35px 40px;
+      background: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(8px);
+    }
+
+    .form-container h3 {
+      font-weight: 600;
+      color: #222;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05);
+      transition: all 0.2s ease-in-out;
+    }
+
+    .form-control:focus {
+      border-color: #6f42c1;
+      box-shadow: 0 0 0 0.15rem rgba(111, 66, 193, 0.25);
+    }
+
+    .add_btn {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .btn-primary {
+      background-color: #6f42c1;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 30px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #4c298d;
+      color: #fff!important
+    }
+
+    .custom-navbar {
+      background-color: #03415b;
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+
+    .custom-navbar .navbar-brand {
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    .small-nav .nav-link {
+      color: #fff;
+      margin: 0 5px;
+      padding: 5px 12px;
+    }
+
+    .small-nav .nav-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+
+    .logout-link:hover {
+      background-color: rgba(255, 0, 0, 0.2);
+    }
+
+    .btn-custom {
+      background-color: #03415b;
+      color: #fff;
+      border: none;
+      border-radius: 12px;
+      padding: 10px 30px;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-custom:hover {
+      background-color: #022c3f; /* Slightly darker on hover */
+    }
+
+    @media (max-width: 576px) {
+      .form-container {
+        padding: 25px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid px-3">
+    <a class="navbar-brand text-white" href="#">LMS Portal</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto small-nav">
+        <li class="nav-item"><a class="nav-link text-white" href="/admin_dash/">Dashboard</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#">Settings</a></li>
+        <li class="nav-item"><a class="nav-link text-white logout-link" href="/login/">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container form-container">
+  <h3>Add New Event</h3>
+  <form id="eventForm">
+    <div class="mb-3">
+      <label for="title" class="form-label">Event Title</label>
+      <input type="text" class="form-control" id="title" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Event Description</label>
+      <textarea class="form-control" id="description" rows="3" required></textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="eventDate" class="form-label">Date</label>
+      <input type="date" class="form-control" id="eventDate" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="eventTime" class="form-label">Time</label>
+      <input type="time" class="form-control" id="eventTime" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="location" class="form-label">Location</label>
+      <input type="text" class="form-control" id="location" required>
+    </div>
+
+    <div class="mb-3">
+      <label for="imageUrl" class="form-label">Image URL (Optional)</label>
+      <input type="url" class="form-control" id="imageUrl">
+    </div>
+
+    <div class="add_btn">
+      <button type="submit" class="btn-custom w-50">Add Event</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

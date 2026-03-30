@@ -1,0 +1,75 @@
+h1{
+    color: #b92b27!important;
+}
+h1{
+    color: aqua;
+}
+#login{
+    background-color: white;
+}
+#signup{
+    background-color: #b92b27;
+    color: white;
+}
+.a{
+    background-color: maroon;
+    color: white;
+}
+p a{
+    color: pink;
+}
+nav ul li{
+    color:maroon;
+}
+
+nav  a{
+    color:palevioletred ;
+}
+
+p+h3{
+    color: darkorange;
+}
+
+.a+button{
+    background-color: blueviolet;
+}
+span>button{
+    color: blueviolet;
+}
+button[id="login"]{
+    color: chartreuse;
+}
+div[id="miID"] p{
+    background-color: burlywood;
+}
+
+button:hover{
+    background-color: #b92b27;
+    color: khaki;
+}
+
+button:active{
+    background-color: crimson;
+    color: aliceblue;
+}
+
+input[type="radio"]:checked+label{
+    font-weight: bolder;
+    text-decoration: pink dotted underline;
+}
+
+div:nth-of-type(3){
+    background-color:violet;
+}
+
+h1::first-letter{
+    background-color: cadetblue;
+}
+
+p::first-line{
+    color: chartreuse;
+}
+
+p::selection{
+    background-color: bisque;
+}

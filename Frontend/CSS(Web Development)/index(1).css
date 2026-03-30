@@ -1,0 +1,32 @@
+div{
+
+    height: 400px;
+    width:500px;
+    background-color: palevioletred;
+    border-width: 4px;
+    border-style: groove;
+    border-color: purple;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+}
+h1{
+    width: 500px;
+    border: 7px double darkblue;
+    border-right-color:yellow ;
+    border-right-style:solid ;
+    
+
+button{
+    height: 100px;
+    width: 100px;
+    border-color: cadetblue;
+    border-radius: 15px;
+}
+button:hover{
+    background-color: blueviolet;
+}
+
+button:active{
+    background-color: blanchedalmond;
+}

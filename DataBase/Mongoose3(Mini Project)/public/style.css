@@ -1,0 +1,17 @@
+body{
+    background-color: white;
+    margin-left: 20px;
+}
+
+.single{
+    background-color: aquamarine;
+    padding: 20px;
+    border-radius: 17px;
+    display: inline-block;
+}
+.para{
+    background-color: rgb(60, 99, 87);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 16px;
+}

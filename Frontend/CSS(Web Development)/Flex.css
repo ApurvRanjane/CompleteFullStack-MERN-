@@ -1,0 +1,34 @@
+#apu{
+    border: 2px solid black;
+    text-align: center;
+    height: 700px;
+    width: 800px;
+   display: flex;
+    margin: 10px auto;
+    flex-direction: row;
+    justify-content:flex-end;
+    /* flex-wrap:wrap; */
+     /* align-items:flex-end;  */
+    align-content:flex-start;
+
+}
+#apu div{
+    height: 40px;
+    width: 40px;
+    
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+}
+/* #blue{
+flex-grow: 4;
+}
+#red{
+    
+    flex-grow: 4;
+} */
+#ggreen{
+flex: 1 1 100px;
+}

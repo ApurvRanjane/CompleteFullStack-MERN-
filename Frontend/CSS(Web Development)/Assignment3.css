@@ -1,0 +1,23 @@
+div{
+    height: 150px;
+    width: 300px;
+    background-color:rgba(0, 255, 222, 0.5);
+    border: 5px dotted black;
+    margin-top: 20px;
+    margin-right: 1em;
+    margin-bottom: 40px;
+    margin-left: 2em;
+    padding: 1em;
+}
+.two{
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 50%;
+    display:inline-block ;
+    opacity: 0.2;
+}
+ul{
+    display: inline-block;
+}

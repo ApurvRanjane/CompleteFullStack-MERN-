@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Notes Upload</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("https://smartcampuses.com/wp-content/uploads/revslider/web-agency-home-content/Slide-2-Background.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 90px;
+        }
+
+        .form-section {
+            background-color: #e6f0ff;
+            margin: 0 auto;
+            padding: 30px 40px;
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        select, input[type="date"], input[type="file"], textarea, input[type="submit"], input[type="reset"] {
+            width: 100%;
+            padding: 12px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        input[type="file"]::file-selector-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        input[type="file"]::file-selector-button:hover {
+            background-color: rgb(65, 103, 153);
+        }
+        .nav-link {
+    font-weight: bold !important;
+}
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+            <img src="https://img.studyclap.com/img/institute/logo/c26fb2db83-jscoe-pune.jpg" alt="Logo" style="height: 40px; margin-right: 10px;">
+            <span class="d-none d-lg-inline">JSPM's Jaywantrao Sawant Insti Of Engi, Pune</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Form Section -->
+<div class="form-section">
+    <h2>Upload Teacher Notes</h2>
+    <form id="uploadForm" method="post" enctype="multipart/form-data">
+        <label for="year">Select Year:</label>
+        <select id="year" onchange="updateSemesters()">
+            <option value="">--Select Year--</option>
+            <option value="1st">First Year</option>
+            <option value="2nd">Second Year</option>
+            <option value="3rd">Third Year</option>
+            <option value="4th">Fourth Year</option>
+        </select>
+
+        <label for="semester">Select Semester:</label>
+        <select id="semester" onchange="updateSubjects()">
+            <option value="">--Select Semester--</option>
+        </select>
+
+        <label for="subject">Select Subject:</label>
+        <select id="subject">
+            <option value="">--Select Subject--</option>
+        </select>
+
+        <label for="unit_point">Unit & Subpoint Name:</label>
+        <textarea id="unit_point" placeholder="Unit Name and Subpoint name" rows="4"></textarea>
+
+        <label for="date">Date of Upload:</label>
+        <input type="date" id="date">
+
+        <label for="notesFile">Upload Notes:</label>
+        <input type="file" id="notesFile" accept=".pdf,.doc,.docx,.ppt,.pptx">
+
+        <input type="submit" id="submitBtn" value="Upload Notes">
+        <input type="reset" id="resetBtn" value="Reset">
+    </form>
+</div>
+
+<script>
+    const data = {
+        "1st": {
+            "1": ["Engineering Maths1", "Physics", "Basic Electrical Engineering", "Programming and problem solving", "System in Mechanics"],
+            "2": ["Engineering Maths2", "Chemistry", "Engineering Mechanics", "Basic Electronics Engineering", "Engineering Graphics"]
+        },
+        "2nd": {
+            "1": ["Fundamentals of Data Structures", "Digital Electronics and logic design", "Discrete Maths", "Computer Graphics", "Object Oriented Programming"],
+            "2": ["Data Structures & Algorithms", "Engineering Maths3", "Microprocessor", "Software Engineering", "PPL"]
+        },
+        "3rd": {
+            "1": ["AI", "Machine Learning", "IoT"],
+            "2": ["Big Data", "Cybersecurity", "Cloud Computing"]
+        },
+        "4th": {
+            "1": ["Project", "Seminar", "Elective I"],
+            "2": ["Internship", "Elective II", "Thesis"]
+        }
+    };
+
+    function updateSemesters() {
+        const year = document.getElementById("year").value;
+        const semesterSelect = document.getElementById("semester");
+        const subjectSelect = document.getElementById("subject");
+
+        semesterSelect.innerHTML = "<option value=''>--Select Semester--</option>";
+        subjectSelect.innerHTML = "<option value=''>--Select Subject--</option>";
+
+        if (year) {
+            semesterSelect.innerHTML += `<option value="1">Semester 1</option>
+                                         <option value="2">Semester 2</option>`;
+        }
+    }
+
+    function updateSubjects() {
+        const year = document.getElementById("year").value;
+        const semester = document.getElementById("semester").value;
+        const subjectSelect = document.getElementById("subject");
+
+        subjectSelect.innerHTML = "<option value=''>--Select Subject--</option>";
+
+        if (data[year] && data[year][semester]) {
+            data[year][semester].forEach(subject => {
+                const option = document.createElement("option");
+                const val = subject.toLowerCase().replace(/\s+/g, "_");
+                option.value = val;
+                option.text = subject;
+                subjectSelect.add(option);
+            });
+        }
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

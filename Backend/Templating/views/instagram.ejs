@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            background-color: rgb(230, 237, 45);
+        }
+        img{
+            height: 800px;
+            width: 800px;
+        }
+    </style>
+    <h1>Welcome to Instagram @<%=data.name%></h1>
+
+    <h2>Followers:<%=data.followers%></h2>&nbsp;&nbsp;<h2>Following:<%=data.following%></h2>
+    <button>Follow</button>
+    <button>Message</button>
+    <br>
+    
+    
+    <hr>
+    <%for(let post of data.posts){%>
+        <img src="<%=post.image%>"><br>
+        <h2>Likes:<%=post.likes%></h2>&nbsp;&nbsp;<h2>Comments:<%=post.comments%></h2>
+        
+        <%}%>
+</body>
+</html>
